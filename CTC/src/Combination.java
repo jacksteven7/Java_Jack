@@ -4,13 +4,11 @@ import java.util.Map;
 
 public class Combination {
 	public static void main(String[] args) {
-		String exp = "abcd";
-		Map<String, Integer> res = new HashMap<String, Integer>();
-		work("",exp);
-		for (String i : res.keySet()) {
-			System.out.println(i);
-		}
-		
+		String exp = "2123";
+		if (exp.length() > 1 )  
+			work("",exp); 
+		else 
+			System.out.println(exp);
 	}
 
 	public static void work(String res,String exp) {

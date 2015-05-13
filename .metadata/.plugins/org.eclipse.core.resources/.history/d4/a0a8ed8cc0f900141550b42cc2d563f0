@@ -1,0 +1,59 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class Combination {
+	public static void main(String[] args) {
+		String exp = "2222";
+		if (exp.length() > 1 )  
+			work("",exp); 
+		else 
+			System.out.println(exp);
+	}
+
+	public static void work(String res,String exp) {
+		for (int i = 0; i < exp.length() ; i++) {
+			String l = exp.substring(i, i+1);
+			String comp = exp.substring(0, i) + exp.substring(i+1,exp.length());
+			if(comp.length()>1)
+				work(res+l,comp);
+			else if (comp.length()==1){
+				System.out.println(res+l+comp);
+			}
+		}
+	}
+}
+/**
+ * 
+ * Given the string "abcd", return all possible combiantions 
+ * 
+ * 
+abcd
+abdc
+acbd
+acdb
+adbc
+adcb
+bacd
+badc
+bcad
+bcda
+bdac
+bdca
+cabd
+cadb
+cbad
+cbda
+cdab
+cdba
+dabc
+dacb
+dbac
+dbca
+dcab
+dcba
+
+ * 
+ * 
+ * 
+ */
