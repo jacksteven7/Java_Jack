@@ -1,0 +1,12 @@
+
+public class Combination {
+	public static void main(String[] args) {
+		String exp = "abc";
+		
+		for (int i = 0; i < exp.length(); i++) {
+			
+		}
+		
+	}
+	
+}

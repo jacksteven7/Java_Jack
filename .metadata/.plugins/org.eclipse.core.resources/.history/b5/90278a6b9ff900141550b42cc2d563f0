@@ -1,0 +1,44 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class Combination {
+	public static void main(String[] args) {
+		String exp = "abc";
+		Map<String, Integer> res = new HashMap<String, Integer>();
+		for (int i = 0; i < exp.length() ; i++) {
+			String l = exp.substring(i, i+1);
+			String comp = exp.substring(0, i) + exp.substring(i+1,exp.length());
+			
+			for (int j = 0; j < comp.length(); j++) {
+				System.out.println(comp.substring(0, j)+l+comp.substring(j, comp.length()));
+			}
+			
+		/**
+	
+			
+		abc
+		bac
+		bca
+		
+		
+		
+		bac
+		abc-
+		acb
+		
+		
+		
+		
+		
+		cab
+		acb-
+		abc-
+		 * 
+		 */
+			
+		}
+		
+	}
+	
+}

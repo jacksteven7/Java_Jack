@@ -1,0 +1,42 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class Combination {
+	public static void main(String[] args) {
+		String exp = "abcd";
+		StringBuffer reverse = null;
+		Map<String, Integer> res = new HashMap<String, Integer>();
+		
+		work(exp);
+		
+		for (String i : res.keySet()) {
+			System.out.println(i);
+		}
+		
+	}
+
+	public static void work(String exp) {
+		for (int i = 0; i < exp.length() ; i++) {
+			String l = exp.substring(i, i+1);
+			String comp = exp.substring(0, i) + exp.substring(i+1,exp.length());
+			
+			System.out.println(l+ " Con  : ");
+			System.out.println(comp);
+			if(comp.length()>1)
+				work(comp);
+			else if (comp==1){
+				System.out.println();
+			}
+			//	l = comp.substring(0, 1)+l+comp.substring(1, comp.length());
+			
+			
+			
+//			for (int j = 0; j <= comp.length(); j++) {
+				//res.put(,j));
+//			}
+		}
+		
+	}
+	
+}

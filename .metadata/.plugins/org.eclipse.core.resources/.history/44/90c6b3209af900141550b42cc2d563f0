@@ -1,0 +1,40 @@
+
+public class Combination {
+	public static void main(String[] args) {
+		String exp = "abc";
+		
+		for (int i = 0; i < exp.length() ; i++) {
+			String l = exp.substring(i, i+1);
+			String comp = exp.substring(0, i) + exp.substring(i+1,exp.length());
+			
+			for (int j = 0; j < args.length; j++) {
+				
+			}
+		/**
+	
+			
+		abc
+		bac
+		bca
+		
+		
+		
+		bac
+		abc-
+		acb
+		
+		
+		
+		
+		
+		cab
+		acb-
+		abc-
+		 * 
+		 */
+			
+		}
+		
+	}
+	
+}
